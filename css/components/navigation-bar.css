@@ -11,7 +11,7 @@
 
 .nav-list{
     display: flex;
-    
+    align-items: center;
 }
 
 .nav-subs{
@@ -27,20 +27,46 @@
     
 }
 
+
 .nav-sub{
     display: flex;
+    margin-top: 70px;
+    justify-content: space-evenly;
+
 }
 .nav-list-slider:hover .nav-subs {
-    display: block; /* '은행소개' 항목에 마우스를 올리면 메뉴가 보이도록 설정 */
+    display: block;
+}
+
+
+.nav-list-slider:hover{
+    text-decoration: underline;
 }
 
 .nav-sub-item {
     color: rgb(0,0,0,0.7);
-    font-size: 12px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  
+    
 }
 .nav-sub-item > a{
-    font-size: 16px;
+    font-size: 18px;
     color: black;
+}
+
+.nav-link{
+    margin: 15px 0px;
+}
+
+.nav-links{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .category{
