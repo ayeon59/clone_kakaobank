@@ -1,4 +1,37 @@
-.main-page__1{
+.main-page-1{
     background-color:#ffef6a;
     height: 700px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction:row;
+    align-items: center;
+}
+
+.main-ryan{
+    height: 600px;
+    margin-right: 80px;
+    padding-top: 100px;
+}
+
+.main-page-1__box{
+    margin-left: 80px;
+}
+
+.main-page-1__box:nth-child(1){
+    margin-bottom: 80px;
+}
+.main-page-1__title{
+    font-weight: 500;
+    font-size: 50px;
+}
+
+h2.main-page-1__title{
+    margin-bottom: 20px;
+}
+
+.main-page-1__content h4:first-child{
+    margin-bottom: 20px;
+}
+.main-page-1__content h4:last-child{
+    margin-bottom: 20px;
 }
