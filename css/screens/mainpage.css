@@ -49,17 +49,21 @@ h2.intro-main__title{
     font-size: 20px;
 }
 
-.intro-mobile__img{
+.intro-mobile__img,
+.intro-passbook__img{
     height: 650px;
     margin-left: 250px;
 }
 
-.intro-mobile__box{
+.intro-mobile__box,
+.intro-passbook__box{
+    
     margin-right: 250px;
 }
 
 
-.intro-mobile__btn>a{
+.intro-mobile__btn>a,
+.intro-passbook__btn>a{
     border-radius: 10px;   
     background-color: #f6f6f6; 
     color:#444444;
@@ -67,13 +71,14 @@ h2.intro-main__title{
     font-size: 18px;
 }
 
-.intro-mobile__btn .fa-angle-right{
+.intro-mobile__btn .fa-angle-right,
+.intro-passbook__btn .fa-angle-right{
     margin-left: 5px;
 }
 
 .intro-deposit__img{
     height: 700px;
-    margin-right: 250px;
+    margin-right: 200px;
     padding-top: 100px;
 }
 
@@ -84,7 +89,7 @@ h2.intro-main__title{
 }
 
 .intro-deposit__box{
-    margin-left: 250px;
+    margin-left: 290px;
 }
 
 .intro-deposit__btn>a{
