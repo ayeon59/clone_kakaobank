@@ -9,6 +9,13 @@
     background-repeat: no-repeat; /* 반복 방지 */   
 }
 
+.intro-abroad{
+    background-image: url("https://www.kakaobank.com/static/images/web/home_map.png");
+    background-size: 600px;
+    background-repeat: no-repeat; /* 반복 방지 */   
+    background-position: -10%;
+}
+
 .intro-main__btn a:first-child,
 .intro-main__btn a:last-child{
     border-radius: 10px;   
@@ -55,15 +62,25 @@ h2.intro-main__title{
     margin-left: 250px;
 }
 
+.intro-abroad__img{
+    height: 750px;
+    margin-left: 230px;
+}
+
+.intro-passbook__img{
+    margin-left: 225px;
+}
+
 .intro-mobile__box,
-.intro-passbook__box{
-    
+.intro-passbook__box,
+.intro-abroad__box{
     margin-right: 250px;
 }
 
 
 .intro-mobile__btn>a,
-.intro-passbook__btn>a{
+.intro-passbook__btn>a,
+.intro-abroad__btn>a{
     border-radius: 10px;   
     background-color: #f6f6f6; 
     color:#444444;
@@ -71,8 +88,15 @@ h2.intro-main__title{
     font-size: 18px;
 }
 
+.intro-passbook__btn>a,
+.intro-abroad__btn>a{
+    padding: 17px 100px;
+}
+
+
 .intro-mobile__btn .fa-angle-right,
-.intro-passbook__btn .fa-angle-right{
+.intro-passbook__btn .fa-angle-right,
+.intro-abroad__btn .fa-angle-right{
     margin-left: 5px;
 }
 
@@ -88,11 +112,13 @@ h2.intro-main__title{
     margin-top: 50px;
 }
 
-.intro-deposit__box{
+.intro-deposit__box,
+.intro-26weeks__box{
     margin-left: 290px;
 }
 
-.intro-deposit__btn>a{
+.intro-deposit__btn>a,
+.intro-26weeks__btn>a{
     border-radius: 10px;   
     background-color: #f6f6f6; 
     color:#444444;
@@ -101,8 +127,41 @@ h2.intro-main__title{
     font-size: 18px;
 }
 
-.intro-deposit__btn .fa-angle-right{
+.intro-deposit__btn .fa-angle-right,
+.intro-26weeks__btn .fa-angle-right{
     margin-left: 5px;
+}
+.intro-26weeks__img{
+    height: 500px;
+    margin-right: 200px;
+}
+
+.intro-loan__box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -50px; /* 화면 위쪽으로 조금 더 올려주기 */
+    
+}
+
+.intro-loan__title{
+
+}
+
+.intro-loan__btn{
+    display: flex;
+}
+
+.intro-loan__btn>a{
+    
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;   
+    background-color: #f6f6f6; 
+    color:#444444;
+    padding: 17px 40px;
+    margin-right: 5px;
+    font-size: 18px;
 }
 
 /* 전체 스크롤 컨테이너 */
@@ -117,7 +176,6 @@ h2.intro-main__title{
 .scroll-section {
     height: 100vh;              /* 각 영역의 높이를 화면 크기만큼 설정 */
     scroll-snap-align: start;   /* 각 영역이 스크롤 시 시작 지점에 맞춰 멈추도록 설정 */
-    display: flex;
-    margin-bottom: 20px;
+    position: relative;   
 }
 
