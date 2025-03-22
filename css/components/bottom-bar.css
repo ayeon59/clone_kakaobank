@@ -1,0 +1,7 @@
+.bottom-bar {
+    position: relative;  /* 또는 아예 생략 */
+    width: 100%;
+    background-color: #f1f1f1; /* 예시 */
+    padding: 20px;
+  }
+  

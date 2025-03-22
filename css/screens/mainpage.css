@@ -128,40 +128,172 @@ h2.intro-main__title{
 }
 
 .intro-deposit__btn .fa-angle-right,
-.intro-26weeks__btn .fa-angle-right{
+.intro-26weeks__btn .fa-angle-right,
+.intro-checkcard__btn .fa-angle-right{
     margin-left: 5px;
 }
 .intro-26weeks__img{
     height: 500px;
     margin-right: 200px;
 }
+/*건들 ㄴㄴ 제발 */
+.intro-loan {
+    background-color: #559cde;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  /* ⬅️ 상단 정렬로 변경 */
+    align-items: center;
+    padding-top: 150px; /* 화면 위에서부터 거리 띄우기 */
+    color: white;
+}
 
-.intro-loan__box{
+.intro-loan__box {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -50px; /* 화면 위쪽으로 조금 더 올려주기 */
-    
+    text-align: center;
+    max-width: 1200px;
+    gap: 35px;
 }
 
-.intro-loan__title{
+.intro-loan__box>h2{
+    font-size: 50px;
+}
 
+.intro-loan__box>h4{
+    font-size: 18px;
+    
 }
 
 .intro-loan__btn{
     display: flex;
+    gap: 10px;
 }
 
 .intro-loan__btn>a{
+    border-radius: 10px;   
+    background-color: rgb(255,255,255,0.09); 
+    color:#fff;
+    width: 170px;
+    height: 50px;
+    line-height: 51px;
+    font-size: 18px;
+}
+
+.intro-loan__img{
+    height: 800px;
     
+}
+
+.intro-checkcard {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  /* ⬅️ 상단 정렬로 변경 */
     align-items: center;
-    justify-content: center;
+    padding-top: 150px; /* 화면 위에서부터 거리 띄우기 */
+    
+}
+
+.intro-checkcard__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 1200px;
+    gap: 35px;
+}
+
+.intro-checkcard__box>h2{
+    font-size: 50px;
+    line-height: 1.35;
+    font-weight: bold;
+}
+
+.intro-checkcard__box>h4{
+    font-size: 18px;
+    color: #444444;
+}
+
+.intro-checkcard__btn{
+    display: flex;
+    gap: 10px;
+}
+
+.intro-checkcard__btn>a{
     border-radius: 10px;   
     background-color: #f6f6f6; 
     color:#444444;
     padding: 17px 40px;
-    margin-right: 5px;
     font-size: 18px;
+}
+
+.intro-loan__img{
+    height: 800px;
+}
+
+.intro-keypoint{
+    background-color: #f9f9f9;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  /* ⬅️ 상단 정렬로 변경 */
+    align-items: center;
+    padding-top: 100px; /* 화면 위에서부터 거리 띄우기 */
+}
+
+.intro-keypoint_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 1200px;
+    
+}
+
+.intro-keypoint__title{
+    display: flex;
+    font-size: 50px;
+    justify-content: flex-start;
+    margin-bottom: 150px;
+    text-align: center;
+    line-height: 1.35;
+    font-weight: bold;
+
+}
+
+.intro-keypoint__span{
+    border: 1px solid #4a4821;
+}
+.intro-keypoint__img{
+    height: 300px;
+    margin-bottom: 80px;
+}
+
+.intro-keypoint__content{
+    display: flex;
+    justify-content: space-evenly;
+    gap:85px;
+    text-align: center;
+}
+
+.intro-keypoint__content strong{
+    display: block;
+    font-size: 20px;
+    font-weight: 550;
+    margin: 20px 0px;   
+    margin-top: -10px;
+}
+
+.intro-keypoint__content p{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.35;
+}
+
+.intro-keypoint__content li:nth-child(3){
+    visibility: hidden;
 }
 
 /* 전체 스크롤 컨테이너 */
@@ -177,5 +309,9 @@ h2.intro-main__title{
     height: 100vh;              /* 각 영역의 높이를 화면 크기만큼 설정 */
     scroll-snap-align: start;   /* 각 영역이 스크롤 시 시작 지점에 맞춰 멈추도록 설정 */
     position: relative;   
+}
+
+.intro-loan {
+  transition: background-color 0.5s ease-in-out;
 }
 
