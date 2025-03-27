@@ -5,9 +5,15 @@
     height: 80px;
     padding-left: 50px;
     padding-right: 50px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
     border-bottom: 1px solid #e5e5e5;
+    z-index: 100;
+    background-color: #ffffff; 
 }
+
+
 
 .nav-list_5>a{
     border-radius: 50px;   

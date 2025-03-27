@@ -1,0 +1,54 @@
+.guide-hours{
+    padding: 0px 90px;
+}
+
+.guide-hours__head{
+    padding-top: 150px;
+    padding-bottom: 40px;
+    margin-bottom: 80px;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.guide-hours__head>h2{
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.guide-hours__head>h4{
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.guide-hours__deposit>table{
+    width: 100%;
+}
+
+thead>tr>th {
+    background-color: #f3f3f3;
+    font-weight: 600;
+    border: 1px solid #ccc;
+    padding: 1rem;
+  }
+
+tbody>tr{
+    border: 1px solid #ccc;  
+    font-weight: 200;
+}
+
+tbody>tr>th{
+    padding: 1rem;
+}
+
+
+tbody>tr>td{
+    border-left: 1px solid #ccc;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.guide-table__title{
+    margin: 40px 0px;    
+    font-size: 25px;
+}

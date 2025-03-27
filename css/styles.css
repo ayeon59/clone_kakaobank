@@ -7,8 +7,10 @@
 @import "components/navigation-bar.css";
 @import "components/introduce.css";
 @import "components/bottom-bar.css";
+@import "components/scroll-setting.css";
 
 
 /* Screens */
 
 @import "screens/mainpage.css";
+@import "screens/help-guide-hours.css";

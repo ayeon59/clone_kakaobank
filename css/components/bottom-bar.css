@@ -1,7 +1,14 @@
 .bottom-bar {
-    position: relative;  /* 또는 아예 생략 */
-    width: 100%;
-    background-color: #f1f1f1; /* 예시 */
-    padding: 20px;
-  }
+    position : absolute;
+
+}
+
+.bottom-content-list {
+    display: flex;
+}
+
+.bottom-content-list>li{
+    margin: 20px 20px;
+}
+
   
