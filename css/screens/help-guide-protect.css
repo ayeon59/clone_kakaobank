@@ -1,0 +1,46 @@
+.guide-protect{
+    padding: 0px 250px;
+    background-color: #fafafa;
+}
+
+.guide-protect__title{
+    padding-top: 150px;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.guide-protect__sub-title{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #d0d0d0;
+    padding-bottom: 30px;
+    margin-bottom: 120px;
+    font-size: 23px;
+}
+
+.guide-protect__info{
+    text-align: center;
+    font-size: 30px;
+    line-height: 45px;
+    margin-bottom: 120px;
+}
+
+.guide-protect__login{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 0px;
+    border: 1px solid #e6e6e6;
+}
+
+.guide-protect__login>h4{
+    font-weight: 400;
+    color: #888888;
+}
+
+.guide-protect__login-btn>button{
+    margin: 20px 0px;
+}
