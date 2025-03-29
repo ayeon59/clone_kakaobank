@@ -27,29 +27,26 @@ if (loanSection) {
   observer.observe(loanSection);
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const openBtn = document.getElementById('openLoginBtn');
+  const closeBtn = document.getElementById('closeLoginBtn');
+  const popup = document.getElementById('popup');
 
-// const abroadSection = document.querySelector('.intro-abroad');
+  if (openBtn && closeBtn && popup) {
+    openBtn.addEventListener('click', () => {
+      popup.style.display = 'flex';
+    });
 
-// const options_out = {
-//     root: null, // 뷰포트를 기준
-//     threshold: 0.5 // 50% 이상 보여야 실행
-//   };
-  
-//   // 3. 콜백 함수
-//   const observer_ = new IntersectionObserver((entries, observer) => {
-//     entries.forEach(entry => {
-//       if (entry.isIntersecting) {
-//         // 3초 뒤 배경색 변경
-//         setTimeout(() => {
-//           entry.target.style.backgroundColor = '#1d1f2b';
-//         }, 1500);
-  
-//         observer.unobserve(entry.target); // 한 번만 실행하고 멈추기
-//       }
-//     });
-//   }, options);
-  
-//   // 4. 요소 감시 시작
-//   if (loanSection) {
-//     observer.observe
+    closeBtn.addEventListener('click', () => {
+      popup.style.display = 'none';
+    });
 
+    popup.addEventListener('click', (e) => {
+      if (e.target === popup) {
+        popup.style.display = 'none';
+      }
+    });
+  } else {
+    console.warn('로그인 버튼 또는 팝업 요소를 찾을 수 없습니다.');
+  }
+});

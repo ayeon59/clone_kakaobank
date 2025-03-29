@@ -527,11 +527,59 @@
     <div class="guide-protect__login">
         <i class="fa fa-power-off fa-2xl"></i>
         <div class="guide-protect__login-btn">
-            <button>로그인</button>
-            <i class="fa fa-angle-right"></i>
+            <button id="openLoginBtn">로그인<i class="fa fa-angle-right"></i></button>
         </div>
         <h4>로그인 시 고객님의<br>개인채무관련 내역 조회가 가능합니다.</h4>
     </div>
+
+    <div class="popup-bg" id="popup">
+
+        <div class="protect__login-popup">
+        <div class="protect__login-main">
+          <button class="close-btn" id="closeLoginBtn">&times;</button>
+          <div class="protect__login-box">
+            <h2>로그인하기</h2>
+            <h4>QR코드 또는 인증번호 입력 방법 중 하나를 선택하여 PC 로그인을 진행해주세요.</h4>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQAAAABRBrPYAAABF0lEQVR42u3aOxKDIBCAYaw8hkeVo3qElFYSWZRFxyEpZJ1kfooMj89qBxfWuPBNezkYDAaDwX6KzW5rQ+p1wW8THcyOpVHww9rbfsoFmBHzEqKheEBiB3uExX3Sw55leQh7gulGGScJVv39BmvANInv6eNDrofdz4q26GLt3Au7n8WNIhEbViZbJkz9chVTWFO2pu4l2XFKi0tK5zArlkK0z0v6iA+Op/QBa8rmPCW9GKeczmFW7Bis7RV2kWVgTVlue8QkkZyvFbCmTA+0ulv0rgczYsfLnSTxGWbPtNykV2xfq0rB2rE4ygfa/WgLs2deSq9Oa04wM1Z+DArlBQNmxsqiX3GUqtUGYXcz/g4Bg8FgsL9hb4yTdaYGjFqsAAAAAElFTkSuQmCC">
+            <div id="protect__login">
+                <section>3701</section>
+                <span class="protect__login-bar"></span>
+                <section>1234</section>
+                <span class="protect__login-bar"></span>
+                <section>3251</section>
+                <span class="protect__login-bar"></span>
+                <section>4534</section>
+            </div>
+            <div>
+                <div id="protect__time-limit">
+                    <span class="protect__time-limit-alarm">2 분 20 초 후 갱신됩니다.</span>
+                    <button class="protect__time-limit-box">
+                        <i class="fa-regular fa-clock"></i>
+                        <p>시간연장</p>
+                    </button>
+                </div>
+                <button class="protect__login-btn">다음</button>
+            </div>
+          </div>
+        </div>
+        <div class="protect__footer">
+            <div class="protect__footer-content">
+                <div class="protect__footer-btn">
+                    <button>QR코드</button>
+                    <span class="protect__footer-border"></span>
+                    <button>인증번호</button>
+                </div>
+                <div class="protect__footer-info">
+                    <p>카카오뱅크 앱 [전체 > 앱설정 > PC로그인 > QR코드]을</p>
+                    <p>선택하고 스마트폰으로 QR코드를 촬영해주세요.</p>
+                </div>
+            </div>
+            <img src="https://www.kakaobank.com/static/images/web/retina/bg_login.png">
+
+        </div>
+        </div>
+      </div>
+      
 </div>
 </main>
 
@@ -594,8 +642,7 @@
 <script src="https://kit.fontawesome.com/3d3e13df1a.js" crossorigin="anonymous"></script>
 
 <!-- 내 자바스크립트 파일 -->
-<script src="app.js"></script>
-</body>
+<script src="../app.js"></script>
 
 </body>
 </html>
