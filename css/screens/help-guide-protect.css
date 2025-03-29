@@ -97,6 +97,20 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+
+
+.protect__login-popup {
+    opacity: 0;
+    transform: translateY(-100px); /* 처음엔 위로 살짝 올라간 상태 */
+    transition: all 0.4s ease;
+  }
+  
+  /* 나타날 때 줄 클래스 */
+.popup-bg.show .protect__login-popup {
+    opacity: 1;
+    transform: translateY(0); /* 원래 위치로 슬라이드 다운 */
+}
+
 .protect__login-main{
     height: 75%;
     display: flex;
@@ -151,7 +165,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-left: 165px;
+    padding-left: 130px;
 }
 
 .protect__time-limit-alarm{

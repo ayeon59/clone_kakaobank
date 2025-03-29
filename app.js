@@ -44,9 +44,78 @@ document.addEventListener('DOMContentLoaded', () => {
     popup.addEventListener('click', (e) => {
       if (e.target === popup) {
         popup.style.display = 'none';
+        setTimeout(() => popup.style.display = "none", 400);
+        clearInterval(intervalId);
+        intervalId = null;
+        time = 300;
+        setTimer();
       }
     });
   } else {
     console.warn('로그인 버튼 또는 팝업 요소를 찾을 수 없습니다.');
   }
+});
+
+
+/*for help-guide-protect__html*/
+
+const minuteSet = document.querySelector("#protect-time_minute");
+const secondSet = document.querySelector("#protect-time_second");
+const startBtn = document.querySelector("#openLoginBtn");
+const restartBtn = document.querySelector(".protect__time-limit-box");
+
+let time= 300;
+let intervalId;
+
+function setTimer() {
+  const minutes = Math.floor(time / 60);
+  const seconds = time % 60;
+
+  minuteSet.textContent = minutes;
+  secondSet.textContent = seconds < 10 ? `0${seconds}` : seconds;
+
+  time--;
+
+  if (time < 0) {
+    time=300;
+  }
+  
+}
+
+startBtn.addEventListener("click", () => {
+  
+  if (!intervalId) {
+    intervalId = setInterval(setTimer, 1000);
+  }
+});
+
+restartBtn.addEventListener("click", () => {
+  // 이미 돌아가는 타이머가 있다면 중복 방지
+
+  time=300;
+  clearInterval(intervalId);
+  setTimer(); // 즉시 실행
+  intervalId = null;
+  intervalId = setInterval(setTimer, 1000);
+  
+});
+
+
+
+const popup = document.getElementById("popup");
+const openBtn = document.getElementById("openLoginBtn");
+const closeBtn = document.getElementById("closeLoginBtn");
+
+openBtn.addEventListener("click", () => {
+  popup.style.display = "flex"; // 보이게 설정
+  setTimeout(() => popup.classList.add("show"), 10); // 살짝 딜레이 후 슬라이드 효과
+});
+
+closeBtn.addEventListener("click", () => {
+  popup.classList.remove("show");
+  setTimeout(() => popup.style.display = "none", 400);
+  clearInterval(intervalId);
+  intervalId = null;
+  time = 300;
+  setTimer();
 });

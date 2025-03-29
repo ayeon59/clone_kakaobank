@@ -1,0 +1,11 @@
+body{
+    font-size: 30px;
+}
+
+#minute{
+    background-color: salmon;
+}
+
+#second{
+    background-color: blanchedalmond;
+}

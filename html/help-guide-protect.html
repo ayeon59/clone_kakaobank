@@ -9,7 +9,7 @@
 <body>
     <ul class="nav-bar">
         <div class="nav-bar__logo">
-            <span>kakao</span><span>bank</span>
+            <a href="main.html" class="nav-bar__main"><span>kakao</span><span>bank</span></a>
         </div>
         <div class="nav-list">
         <div class="nav-list-items">
@@ -533,7 +533,6 @@
     </div>
 
     <div class="popup-bg" id="popup">
-
         <div class="protect__login-popup">
         <div class="protect__login-main">
           <button class="close-btn" id="closeLoginBtn">&times;</button>
@@ -552,7 +551,9 @@
             </div>
             <div>
                 <div id="protect__time-limit">
-                    <span class="protect__time-limit-alarm">2 분 20 초 후 갱신됩니다.</span>
+                    <span class="protect__time-limit-alarm">
+                        <span id="protect-time_minute">5</span>분 <span id="protect-time_second">00</span>초 후 갱신됩니다.
+                    </span>
                     <button class="protect__time-limit-box">
                         <i class="fa-regular fa-clock"></i>
                         <p>시간연장</p>
