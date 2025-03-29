@@ -1,0 +1,35 @@
+.goods-account-group{
+    height: 700px;
+}
+
+.goods-account-group__slider{
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    background-color: #f06d4b;
+    padding: 60px 0px;
+    gap: 25px;
+}
+
+.first__goods-slider,
+.second__goods-slider{
+    color: white;
+    font-size: 45px;
+    font-weight: 700;
+    width: 100%;
+}
+
+
+.slider-box{
+    position: relative;
+    animation: slideMotion 5s infinite;
+}
+
+@keyframes slideMotion {
+    0% {
+      transform:translateX(0);
+    }
+    100% {
+      transform:translateX(100%);
+    }
+  }

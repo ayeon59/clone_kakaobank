@@ -8,10 +8,10 @@
 @import "components/introduce.css";
 @import "components/bottom-bar.css";
 @import "components/scroll-setting.css";
+@import "components/slide-bar.css";
 
 
 /* Screens */
-
 @import "screens/mainpage.css";
 @import "screens/help-guide-hours.css";
 @import "screens/help-guide-protect.css";

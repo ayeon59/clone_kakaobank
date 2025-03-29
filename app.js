@@ -119,3 +119,9 @@ closeBtn.addEventListener("click", () => {
   time = 300;
   setTimer();
 });
+
+
+
+
+const firstSlider=document.querySelector("#account-group__slide_1")
+const secondSlider=document.querySelector("#account-group__slide_2")
