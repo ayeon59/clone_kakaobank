@@ -15,3 +15,13 @@
 @import "screens/mainpage.css";
 @import "screens/help-guide-hours.css";
 @import "screens/help-guide-protect.css";
+@import "screens/goods-account-group.css";
+
+@font-face {
+    font-family: 'KakaoBigSans-ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2503@1.0/KakaoBigSans-ExtraBold.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+  

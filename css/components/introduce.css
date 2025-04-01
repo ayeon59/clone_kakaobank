@@ -10,7 +10,7 @@
 .font__title{
     font-size: 60px;
     line-height: 1.35;
-    font-weight: bold;
+    font-family: 'KakaoBigSans-ExtraBold';
 }
 
 .font__sub-title{

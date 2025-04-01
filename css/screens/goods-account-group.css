@@ -1,0 +1,47 @@
+.goods-account-group__head{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.account-group__title{
+    display: flex;
+    font-size: 50px;
+    font-family:'KakaoBigSans-ExtraBold';
+    margin-bottom: 40px;
+}
+
+.account-group__sub-title{
+    line-height: 30px;
+    font-weight: 400;
+   
+}
+
+.account-group__title>p{
+    color:#f06d4b;
+    margin-left: 15px;
+}
+
+.goods-account-group__content>p>span{
+    font-family: 'KakaoBigSans-ExtraBold';
+}
+.goods-account-group__head>img{
+    height: 250px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+.goods-account-group__box{
+    margin-left: 25%;
+}
+.goods-account-group__sub-img{
+    margin-right: 25%;
+}
+
+.goods-account-group__sub-img>img{  
+    height: 400px;
+}
+
+
