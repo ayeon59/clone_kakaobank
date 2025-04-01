@@ -1,35 +1,38 @@
-.goods-account-group{
-    height: 700px;
-}
-
-.goods-account-group__slider{
-    display: flex;
-    flex-direction: column;
+.goods-account-group__slider {
     margin-top: 200px;
-    background-color: #f06d4b;
-    padding: 60px 0px;
-    gap: 25px;
-}
-
-.first__goods-slider,
-.second__goods-slider{
-    color: white;
-    font-size: 45px;
-    font-weight: 700;
+    padding: 20px 0;
     width: 100%;
+    overflow: hidden;
+    display: flex;
+    background-color: #f06d4b;
+  }
+
+.first__goods-slider__slider-box,
+.second__goods-slider__slider-box{
+    display: flex;
+    gap: 20px;
+    padding-right: 20px;
+    will-change: transform; /* 브라우저에 애니메이션할 것을 미리 알려 친절하게 대하세요. */
+    animation: scrolling 8s linear infinite;
 }
 
-
-.slider-box{
-    position: relative;
-    animation: slideMotion 5s infinite;
+.second__goods-slider__slider-box{
+    animation: scrolling 9s linear infinite;
 }
 
-@keyframes slideMotion {
+.first__goods-slider__slider-box span,
+.second__goods-slider__slider-box span{
+    color: white;
+    font-size: 50px;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+@keyframes scrolling {
     0% {
-      transform:translateX(0);
+      transform: translateX(0);
     }
     100% {
-      transform:translateX(100%);
+      transform: translateX(-100%);
     }
-  }
+}
