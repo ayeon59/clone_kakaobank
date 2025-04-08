@@ -1,62 +1,152 @@
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+  z-index: 100;
+  
+}
 
-  .carousel {
-    margin: 0 auto;
-    padding: 20px 0;
-    max-width: 700px;
-    overflow: hidden;
-    display: flex;
-  }
+.nav-bar--highlight {
+  background-color: red; /* 원하는 색으로 바꾸세요 */
+  transition: background-color 0.3s;
+}
 
-  .card {
-    width: 100%;
-    color: white;
-    border-radius: 24px;
-    box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0;
-    padding: 20px;
-    font-size: xx-large;
-    justify-content: center;
-    align-items: center;
-    min-height: 200px;
 
-    &:nth-child(1) {
-      background: #7958ff;
-    }
 
-    &:nth-child(2) {
-      background: #5d34f2;
-    }
 
-    &:nth-child(3) {
-      background: #4300da;
-    }
-  }
 
-  .carousel {
-    /* ... */
-    > * {
-      flex: 0 0 100%;
-    }
-  }
+.nav-list_5>a{
+  border-radius: 50px;   
+  border : 1px solid #e5e5e5;
+  background-color: #f6f6f6; 
+  color:#444444;
+  padding: 12px 16px;
+}
 
-  /* 더 나은 구조를 위해 카드를 그룹으로 묶습니다. */
-  .group {
-    display: flex;
-    gap: 20px;
-    /* 마지막 카드와 첫 번째 카드 사이에 여백을 만들기 위해 우측에 패딩을 추가합니다. */
-    padding-right: 20px;
-  }
+.nav-list_5 .fa-angle-down{
+  margin-left: 5px;
+}
 
-  .group {
-    /* ... */
-    will-change: transform; /* 브라우저에 애니메이션할 것을 미리 알려 친절하게 대하세요. */
-    animation: scrolling 10s linear infinite;
-  }
 
-  @keyframes scrolling {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
+.nav-list{
+  display: flex;
+  align-items: center;
+}
+
+.nav-subs{
+  border-top: 1px solid #e5e5e5;
+  background-color: white;
+  position: absolute;
+  top : 100%;
+  left: 0;
+  height: auto;
+  width: 100%;
+  display: none;
+  z-index: 100;
+  padding-bottom: 50px;   
+}
+
+.nav-list-items{
+  display: flex;
+  margin: 10px 23px;
+}
+
+.nav-list-items>li{
+  padding: 31px 10px;
+}
+
+
+.nav-sub{
+  display: flex;
+  margin-top: 60px;
+  justify-content: space-evenly;
+
+}
+
+.nav-list-items:hover .nav-subs {
+  display: block; 
+}
+
+.nav-list-slider{
+  display: flex;   
+  border-bottom: 2px solid transparent;
+}
+
+
+
+
+.nav-list_1 > a,
+.nav-list_2 > a,
+.nav-list_3 > a,
+.nav-list_4 > a,
+.nav-list_5 > a
+{
+  color: black;
+}
+
+.nav-list_1 > a:hover,
+.nav-list_2 > a:hover,
+.nav-list_3 > a:hover,
+.nav-list_4 > a:hover{
+  text-decoration: underline;
+}
+
+
+.nav-sub-item {
+  color: rgb(0,0,0,0.7);
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-sub-item > a{
+  font-size: 18px;
+  color: black;
+  
+}
+
+.nav-link{
+  margin: 15px 0px;
+}
+
+.nav-links{
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category{
+  color:rgb(0,0,0,0.7);
+  margin: 0px 0px;
+}
+
+.nav-bar__logo{
+  font-size: 24px;
+  
+}
+.nav-bar__logo span:nth-child(2) {
+  font-weight: 700;
+}
+.fa-globe,
+.fa-angle-down{
+  padding-bottom: 3px;
+}
+
+
+
+
+.goods-loan-emergency__head{
+  background-color: #526cab;
+  color: #ffffff;
+  padding-top: 130px;
+}
+

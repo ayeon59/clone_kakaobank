@@ -17,6 +17,7 @@
 @import "screens/help-guide-hours.css";
 @import "screens/help-guide-protect.css";
 @import "screens/goods-account-group.css";
+@import "screens/goods-loan-emergency.css";
 
 @font-face {
     font-family: 'KakaoBigSans-ExtraBold';

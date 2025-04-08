@@ -1,127 +1,122 @@
-// 1. 감지할 대상 요소
-const loanSection = document.querySelector('.intro-loan');
-
-// 2. 옵저버 옵션
-const options = {
-  root: null, // 뷰포트를 기준
-  threshold: 0.5 // 50% 이상 보여야 실행
-};
-
-// 3. 콜백 함수
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // 요소가 화면에 50% 이상 들어오면 색 바꿈
-        setTimeout(() => {
-          entry.target.style.backgroundColor = '#1d1f2b';
-        }, 1000);
-      } else {
-        // 요소가 뷰포트에서 빠져나가면 색 원래대로
-        entry.target.style.backgroundColor = ''; // 원래 색으로 (필요하면 직접 지정)
-      }
-    });
-  }, options);
-
-// 4. 요소 감시 시작
-if (loanSection) {
-  observer.observe(loanSection);
-}
+// 모든 스크립트를 DOMContentLoaded 내부로 감싸 오류 방지
 
 document.addEventListener('DOMContentLoaded', () => {
-  const openBtn = document.getElementById('openLoginBtn');
-  const closeBtn = document.getElementById('closeLoginBtn');
-  const popup = document.getElementById('popup');
+  // 1. 인터섹션 옵저버 (스크롤 시 색상 변경)
+  const loanSection = document.querySelector('.intro-loan');
 
-  if (openBtn && closeBtn && popup) {
-    openBtn.addEventListener('click', () => {
-      popup.style.display = 'flex';
-    });
+  if (loanSection) {
+    const options = {
+      root: null,
+      threshold: 0.5
+    };
 
-    closeBtn.addEventListener('click', () => {
-      popup.style.display = 'none';
-    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.backgroundColor = '#1d1f2b';
+          }, 1000);
+        } else {
+          entry.target.style.backgroundColor = '';
+        }
+      });
+    }, options);
 
-    popup.addEventListener('click', (e) => {
-      if (e.target === popup) {
-        popup.style.display = 'none';
-        setTimeout(() => popup.style.display = "none", 400);
-        clearInterval(intervalId);
-        intervalId = null;
-        time = 300;
-        setTimer();
+    observer.observe(loanSection);
+  }
+
+  // 2. 로그인 타이머 관련 변수
+  const minuteSet = document.querySelector("#protect-time_minute");
+  const secondSet = document.querySelector("#protect-time_second");
+  const startBtn = document.querySelector("#openLoginBtn");
+  const restartBtn = document.querySelector(".protect__time-limit-box");
+
+  let time = 300;
+  let intervalId;
+
+  function setTimer() {
+    if (!minuteSet || !secondSet) return;
+
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+
+    minuteSet.textContent = minutes;
+    secondSet.textContent = seconds < 10 ? `0${seconds}` : seconds;
+
+    time--;
+    if (time < 0) time = 300;
+  }
+
+  if (startBtn) {
+    startBtn.addEventListener("click", () => {
+      if (!intervalId) {
+        intervalId = setInterval(setTimer, 1000);
       }
     });
-  } else {
-    console.warn('로그인 버튼 또는 팝업 요소를 찾을 수 없습니다.');
   }
-});
 
+  if (restartBtn) {
+    restartBtn.addEventListener("click", () => {
+      time = 300;
+      clearInterval(intervalId);
+      setTimer();
+      intervalId = setInterval(setTimer, 1000);
+    });
+  }
 
-/*for help-guide-protect__html*/
+  // 3. 팝업 열기/닫기
+  const popup = document.getElementById("popup");
+  const openBtn = document.getElementById("openLoginBtn");
+  const closeBtn = document.getElementById("closeLoginBtn");
 
-const minuteSet = document.querySelector("#protect-time_minute");
-const secondSet = document.querySelector("#protect-time_second");
-const startBtn = document.querySelector("#openLoginBtn");
-const restartBtn = document.querySelector(".protect__time-limit-box");
+  if (openBtn && popup) {
+    openBtn.addEventListener("click", () => {
+      popup.style.display = "flex";
+      setTimeout(() => popup.classList.add("show"), 10);
+    });
+  }
 
-let time= 300;
-let intervalId;
+  if (closeBtn && popup) {
+    closeBtn.addEventListener("click", () => {
+      popup.classList.remove("show");
+      setTimeout(() => popup.style.display = "none", 400);
+      clearInterval(intervalId);
+      intervalId = null;
+      time = 300;
+      setTimer();
+    });
+  }
 
-function setTimer() {
-  const minutes = Math.floor(time / 60);
-  const seconds = time % 60;
-
-  minuteSet.textContent = minutes;
-  secondSet.textContent = seconds < 10 ? `0${seconds}` : seconds;
-
-  time--;
-
-  if (time < 0) {
-    time=300;
+  // 4. 네비게이션 호버 시 배경 변경
+  const parent = document.querySelector('.nav-bar');
+  const menuItems = document.querySelectorAll('.category_menu');
+  const children = document.querySelectorAll('.nav-list-items');
+  
+  if (parent && children.length) {
+    children.forEach((child) => {
+      child.addEventListener('mouseenter', () => {
+        parent.classList.add('nav-bar--hovered');
+  
+        // 각각의 a 태그(.category_menu)에 class 추가
+        menuItems.forEach((item) => {
+          item.classList.add('nav-bar--hovered');
+        });
+      });
+  
+      child.addEventListener('mouseleave', () => {
+        parent.classList.remove('nav-bar--hovered');
+  
+        // 각각의 a 태그(.category_menu)에 class 제거
+        menuItems.forEach((item) => {
+          item.classList.remove('nav-bar--hovered');
+        });
+      });
+    });
   }
   
-}
 
-startBtn.addEventListener("click", () => {
-  
-  if (!intervalId) {
-    intervalId = setInterval(setTimer, 1000);
-  }
+
+  // 5. 슬라이더 관련 요소 (추후 사용을 위해 선언)
+  const firstSlider = document.querySelector("#account-group__slide_1");
+  const secondSlider = document.querySelector("#account-group__slide_2");
 });
-
-restartBtn.addEventListener("click", () => {
-  // 이미 돌아가는 타이머가 있다면 중복 방지
-
-  time=300;
-  clearInterval(intervalId);
-  setTimer(); // 즉시 실행
-  intervalId = null;
-  intervalId = setInterval(setTimer, 1000);
-  
-});
-
-
-
-const popup = document.getElementById("popup");
-const openBtn = document.getElementById("openLoginBtn");
-const closeBtn = document.getElementById("closeLoginBtn");
-
-openBtn.addEventListener("click", () => {
-  popup.style.display = "flex"; // 보이게 설정
-  setTimeout(() => popup.classList.add("show"), 10); // 살짝 딜레이 후 슬라이드 효과
-});
-
-closeBtn.addEventListener("click", () => {
-  popup.classList.remove("show");
-  setTimeout(() => popup.style.display = "none", 400);
-  clearInterval(intervalId);
-  intervalId = null;
-  time = 300;
-  setTimer();
-});
-
-
-
-
-const firstSlider=document.querySelector("#account-group__slide_1")
-const secondSlider=document.querySelector("#account-group__slide_2")

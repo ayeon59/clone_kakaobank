@@ -10,8 +10,23 @@
     width: 100%;
     border-bottom: 1px solid #e5e5e5;
     z-index: 100;
-    background-color: #ffffff; 
+    background-color: transparent;
 }
+.nav-bar__goods-loan-emergency{
+    color: #ffffff;
+}
+
+.category_menu{
+    color: #ffffff;
+}
+
+  /* 호버 시 바뀔 스타일 */
+.nav-bar.nav-bar--hovered,
+.category_menu.nav-bar--hovered {
+    background-color: #ffffff;
+    color: black;
+}
+
 
 
 .nav-list_5>a{
@@ -65,22 +80,12 @@
 .nav-list-items:hover .nav-subs {
     display: block; 
 }
+
 .nav-list-slider{
     display: flex;   
     border-bottom: 2px solid transparent;
 }
 
-
-
-
-.nav-list_1 > a,
-.nav-list_2 > a,
-.nav-list_3 > a,
-.nav-list_4 > a,
-.nav-list_5 > a
-{
-    color: black;
-}
 
 .nav-list_1 > a:hover,
 .nav-list_2 > a:hover,
