@@ -1,5 +1,81 @@
 .goods-loan-emergency__head{
     background-color: #526cab;
     color: #ffffff;
-    padding-top: 130px;
+    padding-top: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
+
+.loan-emergency__title{
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.loan-emergency__content{
+    margin: 20px 0px;
+    font-size: 50px;
+    font-weight:lighter;
+    line-height: 60px;
+}
+
+.loan-emergency__keyword{
+   background-color: #425688;
+   padding: 11px 20px;
+   border-radius: 30px;
+}
+
+.loan-emergency__keyword>h4{
+    font-weight: 300;
+}
+
+.loan-emergency__border{
+    width: 1px;
+    height: 50px;
+    background-color: #8796c3;
+}
+
+.loan-emergency__summary{
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    gap: 50px;
+}
+
+.loan-emergency__summary-limit,
+.loan-emergency__summary-loan,
+.loan-emergency__summary-cancel{
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+    
+
+}
+
+.loan-emergency__summary-limit>h4,
+.loan-emergency__summary-loan>h4,
+.loan-emergency__summary-cancel>h4{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.loan-emergency__summary-limit>h3,
+.loan-emergency__summary-loan>h3,
+.loan-emergency__summary-cancel>h3{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.loan-emergency__summary-limit>h3>span,
+.loan-emergency__summary-loan>h3>span{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.loan-emergency__summary-content>h3>span{
+    font-size: 70px;
+}
+
+

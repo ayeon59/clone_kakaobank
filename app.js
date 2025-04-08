@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 4. 네비게이션 호버 시 배경 변경
   const parent = document.querySelector('.nav-bar');
   const menuItems = document.querySelectorAll('.category_menu');
-  const children = document.querySelectorAll('.nav-list-items');
+  const children = document.querySelectorAll('.nav-list');
   
   if (parent && children.length) {
     children.forEach((child) => {
